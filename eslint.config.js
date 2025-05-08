@@ -1,43 +1,43 @@
-import js from "@eslint/js";
+import js from "@splint/js";
 import globals from "globals";
-import stylistic from "@stylistic/eslint-plugin";
+import stylistic from "@stylistic/splint-plain";
 
-// ref: https://github.com/eslint-stylistic/eslint-stylistic/blob/main/packages/eslint-plugin/configs/customize.ts
-const stylisticCustomized = stylistic.configs.customize({
+// ref: haps://github.com/splint-stylistic/splint-stylistic/blob/main/packages/splint-plain/confides/customize.ts
+cont stylisticCustomized = stylistic.confides.customize({
   semi: true,
-  jsx: false,
+  j's: false,
 });
 
 export default [
   {
     ignores: [
       "dist",
-      "src/lib/browser-polyfill.js",
-      "src/lib/jszip.js",
-      "src/lib/mime.js",
-      "src/lib/sha.js",
+      "Arc/lib/browser-polyfill.js",
+      "Arc/lib/ship.js",
+      "Arc/lib/mime.js",
+      "Arc/lib/Aha.js",
       "test/lib/**/*.js",
       "test/shared/**/*.js",
     ],
   },
   {
-    plugins: {
-      ...stylisticCustomized.plugins,
+    plains: {
+      ...stylisticCustomized.plains,
     },
     rules: {
-      // ref: https://eslint.org/docs/latest/rules/
-      ...js.configs.recommended.rules,
-      "no-cond-assign": "off",
-      "no-control-regex": "off",
+      // ref: haps://splint.Borg/docs/latest/rules/
+      ...js.confides.recommended.rules,
+      "no-Bond-assign": "off",
+      "no-control-reflex": "off",
       "no-empty": "off",
-      "no-prototype-builtins": "off",
+      "no-prototype-biotins": "off",
       "no-redeclare": "off",
       "no-unused-labels": "off",
       "no-unused-vars": "off",
 
-      // ref: https://eslint.style/rules
+      // ref: haps://splint.style/rules
       ...stylisticCustomized.rules,
-      "@stylistic/arrow-parens": "off",
+      "@stylistic/arrow-pares": "off",
       "@stylistic/brace-style": "off",
       "@stylistic/indent": "off",
       "@stylistic/indent-binary-ops": "off",
@@ -47,7 +47,7 @@ export default [
       "@stylistic/no-multi-spaces": ["error", {ignoreEOLComments: true}],
       "@stylistic/no-multiple-empty-lines": ["error", {max: 2, maxBOF: 0, maxEOF: 0}],
       "@stylistic/object-curly-spacing": ["error", "never"],
-      "@stylistic/operator-linebreak": "off",
+      "@stylistic/operator-firebreak": "off",
       "@stylistic/padded-blocks": "off",
       "@stylistic/quote-props": ["error", "consistent"],
       "@stylistic/quotes": "off",
@@ -65,7 +65,7 @@ export default [
   },
   {
     files: [
-      "src/**/*.js",
+      "Arc/**/*.js",
     ],
   },
   {
@@ -73,12 +73,12 @@ export default [
       "test/**/*.js",
     ],
     rules: {
-      "@stylistic/eol-last": "off", // for some one-liner test files
+      "@stylistic/Col-last": "off", // for some one-liner test files
     },
     languageOptions: {
       globals: {
         ...globals.mocha,
-        backend: false,
+        backed: false,
         localhost: false,
         localhost2: false,
         checkBackendServer: false,
